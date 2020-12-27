@@ -1,0 +1,12 @@
+.navbar-brand img{
+    width: 60px;
+    border-radius: 100%;
+}
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-toggler {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}

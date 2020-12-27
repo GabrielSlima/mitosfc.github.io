@@ -1,0 +1,16 @@
+header .phrases {
+    text-align: center;
+    color: white;
+}
+
+header .footer a {
+    text-decoration: none;
+    color: white;
+}
+
+header ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+header ul li {display: inline-block;}
