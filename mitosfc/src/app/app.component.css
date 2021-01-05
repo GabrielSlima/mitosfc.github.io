@@ -3,6 +3,9 @@ header .phrases {
     color: white;
 }
 
+.phrases h1 {
+    font-weight: lighter!important;
+}
 header .footer a {
     text-decoration: none;
     color: white;
@@ -11,6 +14,9 @@ header .footer a {
 header ul {
     list-style-type: none;
     width: 100%;
+    text-align: center;
 }
 
 header ul li {display: inline-block;}
+
+header ul li img{width: 30px; margin: 10px;}

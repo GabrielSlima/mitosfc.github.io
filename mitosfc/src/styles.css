@@ -1,6 +1,7 @@
 * {box-sizing: border-box;}
 
 html, body, header, .filter{height: 100%;}
+body{font-family: sans-serif!important;}
 
 #root {margin: 0%;}
 
@@ -8,6 +9,7 @@ header {
     background-image: url('assets/images/bg-mitos.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 header .filter {
