@@ -17,7 +17,7 @@
         </div> <!-- FOOTER -->
 
         <div id="more">
-            <a href="#">
+            <a (click)="scrollToElement(about)">
                 <div id="more-row">
                     <h4 class="m-4">SABER MAIS</h4>
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" class="jsx-156389127"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g></svg>
@@ -27,3 +27,28 @@
         </div> <!-- MORE -->
     </div> <!-- ROW-->
 </header>
+
+<main>
+    <section #about id="about" class="p-4 pt-5 mt-4">
+        <div class="title-container">
+            <h4 class="title">O <span class="red">MITOS FUTEBOL CLUBE</span></h4>
+        </div>
+        <div id="about-text" class="mt-4">
+            O Mitos Futebol Clube foi fundado em 11 de Desembro de 2017,
+            por Geraldo Luiz e Fabiana Fernandes, atuais coordenadores do projeto,
+            que tem desde o seu início o objetivo de integrar crianças que sonham em ter o
+            futuro dentro do futebol profissional. Além desse intuito, a equipe também
+            busca ajudar na formação dos atletas como cidadãos, ensinando através do
+            esporte o respeito pelo próximo, o espírito coletivo, o trabalho em equipe e a
+            dedicação pela vitória, princípios importantes dentro de uma sociedade. 
+            <br>
+            <br>
+            Desde o início, o clube conquistou os títulos do Gonçalense de Futsal sub 11,
+            da Copa Amizade sub 9 e sub 11, além do vice campeonato na Copa Aliança
+            (Nit) sub 9 e os terceiros lugares no Torneio de Verão sub 11 e na 
+            Copa aliança (Nit) sub 11 Campeonato metropolitano de fut7 (Itaboraí) 
+            Campeonato municipal de fut7 (São Gonçalo). Após os bons resultados, 
+            o time agora tem como metas as participações em torneios internacionais da World Futsal.
+        </div>
+    </section>
+</main>
