@@ -10,14 +10,14 @@ export class TeamComponent implements OnInit {
 
   teamMembers: TeamMember[] = [
     {
-      name: "Gabriel",
-      title: "Engineer",
-      photo: "../assets/images/team/gabriel.jpeg"
+      name: "Felipe Batista",
+      title: "Treinador",
+      photo: "../../assets/images/team/felipe-batista.jpeg"
     },
     {
-      name: "Davi",
+      name: "Davi Lima",
       title: "Engineer",
-      photo: "../assets/images/team/gabriel.jpeg"
+      photo: "../../assets/images/team/felipe-batista.jpeg"
     }
   ]
   constructor() { }
