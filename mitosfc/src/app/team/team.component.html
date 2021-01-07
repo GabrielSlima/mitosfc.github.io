@@ -1,0 +1,12 @@
+<section #team id="team" class="p-4 pt-5 mt-4">
+    <div class="title-container">
+        <h4 class="title">NOSSO <span class="red">TIME</span></h4>
+    </div>
+    <div id="about-text" class="mt-4 row">
+        <div *ngFor="let member of teamMembers">
+            {{ member.name }}
+            {{ member.title }}
+            {{ member.photo }}
+        </div>
+    </div>
+</section>

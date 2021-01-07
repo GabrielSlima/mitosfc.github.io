@@ -15,3 +15,14 @@ header {
 header .filter {
     background: rgba(0,0,0,.7);
 }
+
+.red {
+    color: #891010;
+}
+
+.title {
+    border-bottom: 1px solid rgba(137, 16, 16, 0.8);
+    display: inline-block;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
