@@ -37,3 +37,24 @@ header ul li img{width: 30px; margin: 10px;}
 #more-row {margin: 30px;}
 
 #more-row h4 {font-weight: lighter;}
+
+#modalities {
+    color: white;
+    text-align: center;
+}
+
+#modalities h4 {
+    color: rgba(0, 0, 0, .7);
+}
+
+.modality {
+    border-radius: 20px;
+    padding: 0;
+    margin: 15px 0;
+    background-image: url('../assets/images/games/index.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.filtered-modality{padding: 100px 40px; border-radius: 20px;}

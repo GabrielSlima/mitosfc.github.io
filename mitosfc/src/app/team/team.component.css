@@ -7,7 +7,7 @@
     
     text-align: center;
 
-    padding: 10px 15px;
+    padding: 10px 30px;
 
     position: absolute;
 
@@ -24,6 +24,8 @@
 
 .team-member-information-title span {
     border-bottom: 1px solid rgba(137, 16, 16, 0.8);
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
-.team-member-information-name {font-weight: normal;}
+.team-member-information-name {font-weight: normal; color: rgba(0, 0, 0, .7);}

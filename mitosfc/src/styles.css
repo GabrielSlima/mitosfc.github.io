@@ -20,6 +20,14 @@ header .filter {
     color: #891010;
 }
 
+.red-85 {
+    background:rgba(137, 16, 16, .85);
+}
+
+.green-85{
+    background: rgba(17, 95, 52, .85);
+}
+
 .title {
     border-bottom: 1px solid rgba(137, 16, 16, 0.8);
     display: inline-block;

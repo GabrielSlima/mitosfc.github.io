@@ -52,4 +52,18 @@
         </div>
     </section>
     <app-team></app-team>
+
+    <section #modalitiesContainer id="modalities" class="p-4 pt-5 mt-4 container-fluid">
+        <div class="title-container mb-4">
+            <h4 class="">MODALIDADES</h4>
+        </div>
+        <div class="row">
+            <div *ngFor="let modality of modalities" class="col-12 modality">
+                <div class="filtered-modality {{ modality.color }}">
+                    <h3 class="mb-3">{{ modality.name }}</h3>
+                    <div>{{ modality.description }}</div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
