@@ -66,4 +66,17 @@
             </div>
         </div>
     </section>
+
+    <section #depoimentsContainer id="depoiments" class="p-4 pt-5 mt-4 container-fluid">
+            <div class="title-container mb-5">
+                <h4 class="">O QUE DIZEM SOBRE <span class="red">NOSSO TRABALHO</span></h4>
+            </div>
+            <div class="row">
+                <div *ngFor="let review of reviews" class="col-12 pb-4 review-container">
+                    <a href="{{ review.uri }}"  target="blank">
+                        <img class="review-image" src="{{ review.photo_name }}" alt="{{ review.client_name }}">
+                    </a>
+                </div>
+            </div>
+        </section>
 </main>

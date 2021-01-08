@@ -58,3 +58,18 @@ header ul li img{width: 30px; margin: 10px;}
 }
 
 .filtered-modality{padding: 100px 40px; border-radius: 20px;}
+
+.review-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.review-image {
+    max-height: 100%;
+    max-width: 100%;
+    transition: .3s ease;
+}
+
+.review-image:hover{
+    box-shadow: 1px 1px 5px teal;
+    border-radius: 10px;
+}
