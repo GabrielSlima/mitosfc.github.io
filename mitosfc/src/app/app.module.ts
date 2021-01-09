@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { ContactsMenuComponent } from './contacts-menu/contacts-menu.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TeamComponent } from './team/team.component'
+import { TeamComponent } from './team/team.component';
+import { LocationComponent } from './location/location.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     MainMenuComponent,
     ContactsMenuComponent,
-    TeamComponent
+    TeamComponent,
+    LocationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
