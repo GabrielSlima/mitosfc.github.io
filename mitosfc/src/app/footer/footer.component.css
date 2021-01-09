@@ -1,6 +1,7 @@
 #footer {
     color: white;
     background: #891010;
+    line-height: 1.9;
 }
 
 #footer ul li {display: inline-block;}
