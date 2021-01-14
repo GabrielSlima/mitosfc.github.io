@@ -46,22 +46,24 @@ export class MainMenuComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
 
-  onWindowScroll(event){
+  onWindowScroll(event: any){
     let navbar_menu = document.querySelector('#responsive-nav');
     let navbar_toggler_button = document.querySelector("#navbar-toggler-button")
     let logo = document.querySelector("#logo")
     if((navbar_menu && logo) && (window.pageYOffset > navbar_menu.clientHeight)){
       navbar_menu.classList.add('bg-light');
-      logo.classList.add('reduced-logo')
+      logo.classList.add('reduced-logo');
       if(navbar_toggler_button){
-        navbar_toggler_button.classList.remove('navbar-toggler-white')
+        navbar_toggler_button.classList.remove('navbar-toggler-white');
+        navbar_toggler_button.classList.add('.navbar-bordered');
       }
     }
     else if(navbar_menu && logo) {
       navbar_menu.classList.remove('bg-light');
-      logo.classList.remove('reduced-logo')
+      logo.classList.remove('reduced-logo');
       if(navbar_toggler_button){
         navbar_toggler_button.classList.add('navbar-toggler-white')
+        navbar_toggler_button.classList.remove('.navbar-bordered');
       }
     }
   }
