@@ -1,12 +1,26 @@
 .navbar-brand img{
     width: 60px;
     border-radius: 100%;
+    transition: .5s ease;
 }
+
+.reduced-logo {
+    width: 50px!important;
+}
+
 .navbar-nav {
     text-align: center;
 }
 
-.navbar-toggler {
+.navbar-toggler-white {
     color: #f8f9fa;
     border-color: #f8f9fa;
+}
+
+#responsive-nav {
+    transition: .5s ease;
+}
+
+.navbar-light .navbar-toggler {
+    border: none!important;
 }
