@@ -17,11 +17,14 @@ export class AppComponent {
   modalities: Modality[] = [{
     name: "Futsal",
     description: "Jogo entre duas equipes com 5 jogadores cada em uma quadra esportiva",
-    color: "red-85"
+    color: "red-85",
+    image_name: 'index.jpeg'
   },{
     name: "Futebol Society",
     description: "Jogo entre duas equipes com 7 jogadores cada em uma quadra de grama sintética",
-    color: "green-85"
+    color: "green-85",
+    image_name: '3.jpeg'
+
   }]
 
   reviews: Review[] = [{
