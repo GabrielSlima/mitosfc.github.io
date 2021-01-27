@@ -1,19 +1,22 @@
-<nav id="responsive-nav" (scroll)="onWindowScroll($event)" [ngClass]="!isMenuCollapsed ? 'navbar navbar-expand-lg navbar-light fixed-top bg-light': 'navbar navbar-expand-lg navbar-light fixed-top '">
+<nav id="responsive-nav" (scroll)="onWindowScroll()" [ngClass]="!isMenuCollapsed || !isOffsetZero  ? 'navbar navbar-expand-lg navbar-light fixed-top bg-light': 'navbar navbar-expand-lg navbar-light fixed-top '">
     <a class="navbar-brand" [routerLink]="['/']"><img src="../../assets/images/logo.jpg" alt="Logo" id="logo"></a>
-    <button id="navbar-toggler-button" [ngClass]="isMenuCollapsed ? 'navbar-toggler-white navbar-toggler' : 'navbar-toggler'" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+    <button id="navbar-toggler-button" [ngClass]="isMenuCollapsed && isOffsetZero? 'navbar-toggler-white navbar-toggler' : 'navbar-toggler'" type="button" (click)="collapseMenu()">&#9776;</button>
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav pb-4">
             <li class="nav-item p-2">
-                <a class="nav-link" [routerLink]="['/']">Quem somos</a>
+                <a class="nav-link" (click)="scrollToElement('#main-header')">Quem somos</a>
             </li>
             <li class="nav-item p-2">
-                <a class="nav-link" [routerLink]="['/']">Nosso time</a>
+                <a class="nav-link" (click)="scrollToElement('#team')">Nosso time</a>
             </li>
             <li class="nav-item p-2">
-                <a class="nav-link" [routerLink]="['/']">Depoimentos</a>
+                <a class="nav-link" (click)="scrollToElement('#modalities')">Modalidades</a>
             </li>
             <li class="nav-item p-2">
-                <a class="nav-link" [routerLink]="['/']">Contatos</a>
+                <a class="nav-link" (click)="scrollToElement('#reviews')">Depoimentos</a>
+            </li>
+            <li class="nav-item p-2">
+                <a class="nav-link" (click)="scrollToElement('#footer')">Contatos</a>
             </li>
         </ul>
     </div>

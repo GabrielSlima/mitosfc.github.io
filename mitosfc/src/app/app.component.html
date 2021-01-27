@@ -1,5 +1,5 @@
 <app-main-menu></app-main-menu>
-<header class="container-fluid">
+<header class="container-fluid" id="main-header">
     <div class="filter row justify-content-center">
         <div class="content align-self-center">
             <div class="body">
@@ -51,7 +51,7 @@
             o time agora tem como metas as participações em torneios internacionais da World Futsal.
         </div>
     </section>
-    <app-team></app-team>
+    <app-team id="team"></app-team>
 
     <section #modalitiesContainer id="modalities" class="p-4 pt-5 mt-4 container-fluid">
         <div class="title-container mb-4">
@@ -67,7 +67,7 @@
         </div>
     </section>
 
-    <section #depoimentsContainer id="depoiments" class="p-4 pt-5 mt-4 container-fluid">
+    <section #reviewsContainer id="reviews" class="p-4 pt-5 mt-4 container-fluid">
         <div class="title-container" style="margin-bottom: 2rem!important;">
             <h4 class="">O QUE DIZEM SOBRE <span class="red">NOSSO TRABALHO</span></h4>
         </div>
@@ -79,8 +79,5 @@
             </div>
         </div>
     </section>
-
-    <app-location></app-location>
-
-    <app-footer></app-footer>
+    <app-footer id="footer"></app-footer>
 </main>

@@ -3,12 +3,14 @@
     border-radius: 100%;
     transition: .5s ease;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+    margin-right: 15px;
 }
 
 .reduced-logo {
     width: 50px!important;
 }
 
+#logo-text{font-size: 1.5rem;}
 .navbar-nav {
     text-align: center;
 }
@@ -29,3 +31,5 @@
 .navbar-light .navbar-toggler {
     border: none!important;
 }
+
+.nav-item:hover {cursor: pointer;}

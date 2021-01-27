@@ -33,24 +33,26 @@ import {
 })
 export class MainMenuComponent implements OnInit {
 
-  isOpen = false;
+  public isOffsetZero = true;
 
   public isMenuCollapsed = true;
   
   collapseMenu(): void{
-    this.isMenuCollapsed = !this.isMenuCollapsed;
-    if(!this.isMenuCollapsed){
-      console.log(document.querySelector("#responsive-menu"));
-    }
+    this.isMenuCollapsed = !this.isMenuCollapsed
+    this.isOffsetZero = window.pageYOffset == 0;
+    this.onWindowScroll();
   }
 
   @HostListener('window:scroll', ['$event'])
 
-  onWindowScroll(event: any){
+  onWindowScroll(){
+    console.log(window.pageYOffset);
     let navbar_menu = document.querySelector('#responsive-nav');
     let navbar_toggler_button = document.querySelector("#navbar-toggler-button")
     let logo = document.querySelector("#logo")
-    if((navbar_menu && logo) && (window.pageYOffset > navbar_menu.clientHeight)){
+    
+    if((navbar_menu && logo) && ((window.pageYOffset > navbar_menu.clientHeight) || !this.isMenuCollapsed)){
+      console.log('White nav...');
       navbar_menu.classList.add('bg-light');
       logo.classList.add('reduced-logo');
       if(navbar_toggler_button){
@@ -58,18 +60,26 @@ export class MainMenuComponent implements OnInit {
         navbar_toggler_button.classList.add('.navbar-bordered');
       }
     }
-    else if(navbar_menu && logo) {
-      navbar_menu.classList.remove('bg-light');
+    else if(navbar_menu && logo && window.pageYOffset == 0 ){
+      console.log('Transparent nav...');
       logo.classList.remove('reduced-logo');
-      if(navbar_toggler_button){
-        navbar_toggler_button.classList.add('navbar-toggler-white')
-        navbar_toggler_button.classList.remove('.navbar-bordered');
+      if(this.isMenuCollapsed){
+        navbar_menu.classList.remove('bg-light');
+        if(navbar_toggler_button){
+          navbar_toggler_button.classList.add('navbar-toggler-white')
+          navbar_toggler_button.classList.remove('.navbar-bordered');
+        }
       }
     }
+  }
+  scrollToElement(element_id: string): void {
+    let element = document.querySelector(element_id);
+    if(element) element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
   constructor() { }
 
   ngOnInit(): void {
+    this.isOffsetZero = window.pageYOffset == 0;
   }
 
 }
