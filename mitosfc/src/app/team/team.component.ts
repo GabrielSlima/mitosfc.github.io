@@ -12,12 +12,12 @@ export class TeamComponent implements OnInit {
     {
       name: "Felipe Batista",
       title: "Treinador",
-      photo: "../../assets/images/team/felipe-batista.jpeg"
+      photo: "../../assets/images/team/felipe-batista.jpg"
     },
     {
-      name: "Davi Lima",
-      title: "Engineer",
-      photo: "../../assets/images/team/felipe-batista.jpeg"
+      name: "Jonatas Silva",
+      title: "Treinador",
+      photo: "../../assets/images/team/jonatas-silva.jpeg"
     }
   ]
   constructor() { }
