@@ -41,7 +41,7 @@
             busca ajudar na formação dos atletas como cidadãos, ensinando através do
             esporte o respeito pelo próximo, o espírito coletivo, o trabalho em equipe e a
             dedicação pela vitória, princípios importantes dentro de uma sociedade. 
-            <br>>
+            <br>
             <br>
             Desde o início, o clube conquistou os títulos do Gonçalense de Futsal sub 11,
             da Copa Amizade sub 9 e sub 11, além do vice campeonato na Copa Aliança
@@ -58,10 +58,12 @@
             <h4 class="">MODALIDADES</h4>
         </div>
         <div class="row">
-            <div *ngFor="let modality of modalities" class="col-12 modality" style="background-image: url('../assets/images/games/{{ modality.image_name}}')">
-                <div class="filtered-modality {{ modality.color }}">
-                    <h3 class="mb-3">{{ modality.name }}</h3>
-                    <div>{{ modality.description }}</div>
+            <div *ngFor="let modality of modalities" class="col-12 col-sm-6 col-md-6 " >
+                <div class="modality-container modality" style="background-image: url('../assets/images/games/{{ modality.image_name}}')">
+                    <div class="filtered-modality {{ modality.color }}">
+                        <h3 class="mb-3">{{ modality.name }}</h3>
+                        <div>{{ modality.description }}</div>
+                    </div>
                 </div>
             </div>
         </div>

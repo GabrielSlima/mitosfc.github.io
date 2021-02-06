@@ -1,24 +1,18 @@
 .team-member img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .team-member-information {
-    
     text-align: center;
-
     padding: 10px 30px;
-
     position: absolute;
-
     background: white;
-
     margin: auto;
-
-    top: 85%;
-
+    top: 80%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 }
 
@@ -28,4 +22,7 @@
     padding-left: 5px;
 }
 
-.team-member-information-name {font-weight: normal; color: rgba(0, 0, 0, .7);}
+.team-member-information-name {
+    font-weight: normal;
+    color: rgba(0, 0, 0, .7);
+}

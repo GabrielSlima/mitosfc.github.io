@@ -2,8 +2,8 @@
     <div class="title-container">
         <h4 class="title">NOSSO <span class="red">TIME</span></h4>
     </div>
-    <div id="about-text" class="mt-4 row">
-        <div *ngFor="let member of teamMembers" class="col-12 team-member mb-3">
+    <div id="team-content" class="mt-4 row">
+        <div *ngFor="let member of teamMembers" class="col-12 col-sm-6 col-md-6 col-lg-3 team-member mb-3">
             <img src="{{ member.photo }}" alt="{{ member.name }}:{{ member.title }}">
             <div class="team-member-information">
                 <div class="team-member-information-title mb-2"> <span class="pb-1">{{ member.title }}</span></div>

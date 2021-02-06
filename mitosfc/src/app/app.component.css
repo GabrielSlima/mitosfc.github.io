@@ -50,15 +50,22 @@ header ul li img{width: 30px; margin: 10px;}
 }
 
 .modality {
+    max-width: 360px;
+    max-height: 320px;
     border-radius: 20px;
     padding: 0;
-    margin: 15px 0;
+    margin: auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.filtered-modality{padding: 100px 40px; border-radius: 20px;}
+.filtered-modality{
+    padding: 100px 40px;
+    border-radius: 20px;
+    max-width: 360px;
+    max-height: 320px;
+}
 
 .review-container {
     padding-left: 0;
