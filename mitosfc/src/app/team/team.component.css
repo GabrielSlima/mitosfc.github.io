@@ -1,5 +1,12 @@
+#team {
+    text-align: center;
+}
+.team-member{
+    max-width: 350px!important;
+}
+
 .team-member img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 5px;
     height: 100%;
     object-fit: cover;
@@ -25,4 +32,27 @@
 .team-member-information-name {
     font-weight: normal;
     color: rgba(0, 0, 0, .7);
+}
+
+@media screen and (max-width: 340px){
+    .team-member-information{top:70%;}
+}
+
+@media screen and (max-width: 576px){
+    #team {
+        text-align: center;
+    }
+    .team-member{
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 786px){
+    #about{
+        padding: 5rem;
+    }
+
+    #team {
+        padding: 5rem!important;
+    }
 }

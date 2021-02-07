@@ -29,55 +29,62 @@
 </header>
 
 <main>
-    <section #about id="about" class="p-4 pt-5 mt-4">
-        <div class="title-container">
-            <h4 class="title">O <span class="red">MITOS FUTEBOL CLUBE</span></h4>
-        </div>
-        <div id="about-text" class="mt-4">
-            O Mitos Futebol Clube foi fundado em 11 de Desembro de 2017,
-            por Geraldo Luiz e Fabiana Fernandes, atuais coordenadores do projeto,
-            que tem desde o seu início o objetivo de integrar crianças que sonham em ter o
-            futuro dentro do futebol profissional. Além desse intuito, a equipe também
-            busca ajudar na formação dos atletas como cidadãos, ensinando através do
-            esporte o respeito pelo próximo, o espírito coletivo, o trabalho em equipe e a
-            dedicação pela vitória, princípios importantes dentro de uma sociedade. 
-            <br>
-            <br>
-            Desde o início, o clube conquistou os títulos do Gonçalense de Futsal sub 11,
-            da Copa Amizade sub 9 e sub 11, além do vice campeonato na Copa Aliança
-            (Nit) sub 9 e os terceiros lugares no Torneio de Verão sub 11 e na 
-            Copa aliança (Nit) sub 11 Campeonato metropolitano de fut7 (Itaboraí) 
-            Campeonato municipal de fut7 (São Gonçalo). Após os bons resultados, 
-            o time agora tem como metas as participações em torneios internacionais da World Futsal.
+    <section #about id="about" class="p-5">
+        <div class="about-wrapper">
+            <div class="title-container">
+                <h4 class="title">O <span class="red">MITOS FUTEBOL CLUBE</span></h4>
+            </div>
+            <div id="about-text" class="mt-4">
+                O Mitos Futebol Clube foi fundado em 11 de Desembro de 2017,
+                por Geraldo Luiz e Fabiana Fernandes, atuais coordenadores do projeto,
+                que tem desde o seu início o objetivo de integrar crianças que sonham em ter o
+                futuro dentro do futebol profissional. Além desse intuito, a equipe também
+                busca ajudar na formação dos atletas como cidadãos, ensinando através do
+                esporte o respeito pelo próximo, o espírito coletivo, o trabalho em equipe e a
+                dedicação pela vitória, princípios importantes dentro de uma sociedade. 
+                <br>
+                <br>
+                Desde o início, o clube conquistou os títulos do Gonçalense de Futsal sub 11,
+                da Copa Amizade sub 9 e sub 11, além do vice campeonato na Copa Aliança
+                (Nit) sub 9 e os terceiros lugares no Torneio de Verão sub 11 e na 
+                Copa aliança (Nit) sub 11 Campeonato metropolitano de fut7 (Itaboraí) 
+                Campeonato municipal de fut7 (São Gonçalo). Após os bons resultados, 
+                o time agora tem como metas as participações em torneios internacionais da World Futsal.
+            </div>
         </div>
     </section>
+
     <app-team id="team"></app-team>
 
-    <section #modalitiesContainer id="modalities" class="p-4 pt-5 mt-4 container-fluid">
-        <div class="title-container mb-4">
-            <h4 class="">MODALIDADES</h4>
-        </div>
-        <div class="row">
-            <div *ngFor="let modality of modalities" class="col-12 col-sm-6 col-md-6 " >
-                <div class="modality-container modality" style="background-image: url('../assets/images/games/{{ modality.image_name}}')">
-                    <div class="filtered-modality {{ modality.color }}">
-                        <h3 class="mb-3">{{ modality.name }}</h3>
-                        <div>{{ modality.description }}</div>
+    <section #modalitiesContainer id="modalities" class="p-5 mt-4 container-fluid">
+        <div class="modalities-container">
+            <div class="title-container mb-5">
+                <h4 class="">MODALIDADES</h4>
+            </div>
+            <div class="row">
+                <div *ngFor="let modality of modalities" class="col-12 col-sm-6 col-md-6 p-2">
+                    <div class="modality-container modality" style="background-image: url('../assets/images/games/{{ modality.image_name}}')">
+                        <div class="filtered-modality {{ modality.color }}">
+                            <h3 class="mb-3">{{ modality.name }}</h3>
+                            <div>{{ modality.description }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section #reviewsContainer id="reviews" class="p-4 pt-5 mt-4 container-fluid">
-        <div class="title-container" style="margin-bottom: 2rem!important;">
-            <h4 class="">O QUE DIZEM SOBRE <span class="red">NOSSO TRABALHO</span></h4>
-        </div>
-        <div class="row">
-            <div *ngFor="let review of reviews" class="col-12 pb-4 review-container">
-                <a href="{{ review.uri }}"  target="blank">
-                    <img class="review-image" src="{{ review.photo_name }}" alt="{{ review.client_name }}">
-                </a>
+    <section #reviewsContainer id="reviews" class="mt-4 container-fluid">
+        <div class="reviews-wrapper">
+            <div class="title-container" style="margin-bottom: 2rem!important;">
+                <h4 class="">O QUE DIZEM SOBRE <span class="red">NOSSO TRABALHO</span></h4>
+            </div>
+            <div class="row">
+                <div *ngFor="let review of reviews" class="col-12 col-sm-6 col-md-4 pb-4 review-container">
+                    <a href="{{ review.uri }}"  target="blank">
+                        <img class="review-image" src="{{ review.photo_name }}" alt="{{ review.client_name }}">
+                    </a>
+                </div>
             </div>
         </div>
     </section>

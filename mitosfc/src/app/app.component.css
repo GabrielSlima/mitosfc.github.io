@@ -32,6 +32,7 @@ header ul li img{width: 30px; margin: 10px;}
 #more a {
     text-decoration: none;
     color: white;
+    padding: 10px;
 }
 
 #more-row {margin: 30px;}
@@ -40,9 +41,17 @@ header ul li img{width: 30px; margin: 10px;}
 
 #about-text {line-height: 1.9;}
 
+#about {
+    background: #f8f9fa !important;
+    padding: 2rem;
+}
+
 #modalities {
     color: white;
     text-align: center;
+    background: #f8f9fa !important;
+    padding-top: 4.75rem!important;
+    padding-bottom: 4.75rem!important;
 }
 
 #modalities h4 {
@@ -67,9 +76,15 @@ header ul li img{width: 30px; margin: 10px;}
     max-height: 320px;
 }
 
+.modalities-container{
+    max-width: 810px;
+    margin: auto;
+}
+
+#reviews {padding: 5rem 3rem!important;}
+
 .review-container {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 10px;
 }
 .review-image {
     max-height: 100%;
@@ -80,4 +95,22 @@ header ul li img{width: 30px; margin: 10px;}
 .review-image:hover{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
     border-radius: 10px;
+}
+
+@media screen and (max-width: 340px){
+    .filtered-modality{
+        padding: 60px 40px;
+    }
+}
+
+@media screen and (min-width: 786px){
+    #about{
+        padding: 5rem!important;
+    }
+}
+
+@media screen and (max-width: 992px){
+    #reviews{
+        text-align: center;
+    }
 }

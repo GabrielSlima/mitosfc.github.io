@@ -50,3 +50,29 @@
 .copy{
     text-align: center;
 }
+
+@media screen and (min-width: 786px){
+    .footer-find-us{
+        padding-right: 5rem!important;
+    }
+
+    #partnership {
+        border-left: 1px solid rgba(255,255,255, .2);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .footer-find-us{
+        padding-right: 2rem!important;
+        padding-left: 2rem!important;
+        border-left: 1px solid rgba(255,255,255, .2)!important;
+    }
+
+    #partnership {
+        border-left: 1px solid rgba(255,255,255, .2);
+    }
+
+    .footer-about-us {
+        padding-right: 2rem;
+    }
+}

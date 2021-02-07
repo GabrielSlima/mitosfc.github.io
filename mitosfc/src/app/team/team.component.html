@@ -1,13 +1,15 @@
 <section #team id="team" class="p-4 pt-5 mt-4">
-    <div class="title-container">
-        <h4 class="title">NOSSO <span class="red">TIME</span></h4>
-    </div>
-    <div id="team-content" class="mt-4 row">
-        <div *ngFor="let member of teamMembers" class="col-12 col-sm-6 col-md-6 col-lg-3 team-member mb-3">
-            <img src="{{ member.photo }}" alt="{{ member.name }}:{{ member.title }}">
-            <div class="team-member-information">
-                <div class="team-member-information-title mb-2"> <span class="pb-1">{{ member.title }}</span></div>
-                <div class="team-member-information-name">{{ member.name }}</div>
+    <div class="team-wrapper">
+        <div class="title-container">
+            <h4 class="title">NOSSO <span class="red">TIME</span></h4>
+        </div>
+        <div id="team-content" class="mt-4 row justify-content-center">
+            <div *ngFor="let member of teamMembers" class="col-12 col-sm-6 col-md-6 col-lg-4 team-member mb-3 justify-content-center">
+                <img src="{{ member.photo }}" alt="{{ member.name }}:{{ member.title }}">
+                <div class="team-member-information">
+                    <div class="team-member-information-title mb-2"> <span class="pb-1">{{ member.title }}</span></div>
+                    <div class="team-member-information-name">{{ member.name }}</div>
+                </div>
             </div>
         </div>
     </div>

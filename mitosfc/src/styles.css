@@ -34,3 +34,8 @@ header .filter {
     padding-right: 15px;
     padding-bottom: 10px;
 }
+
+.about-wrapper, .team-wrapper, .reviews-wrapper {
+    max-width: 1080px;
+    margin: auto;
+}

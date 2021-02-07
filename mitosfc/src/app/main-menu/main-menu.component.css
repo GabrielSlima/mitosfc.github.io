@@ -20,7 +20,7 @@
     border-color: #f8f9fa;
 }
 
-.navbar-bordered {
+.navbar-border {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
 }
 
@@ -33,3 +33,20 @@
 }
 
 .nav-item:hover {cursor: pointer;}
+
+.navbar-light .navbar-nav .nav-link{font-size: 18px!important;}
+
+@media screen and (min-width: 992px){
+    .white-link{
+        color: white!important;
+    }
+    .black-link{
+
+        color: rgba(0, 0, 0, .5)!important;
+    }
+}
+@media screen and (max-width: 992px){
+    .navbar-nav{
+        padding-bottom: 1.5rem!important;
+    }
+}

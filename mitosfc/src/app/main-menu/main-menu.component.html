@@ -2,21 +2,21 @@
     <a class="navbar-brand" [routerLink]="['/']"><img src="../../assets/images/logo.jpg" alt="Logo" id="logo"></a>
     <button id="navbar-toggler-button" [ngClass]="isMenuCollapsed && isOffsetZero? 'navbar-toggler-white navbar-toggler' : 'navbar-toggler'" type="button" (click)="collapseMenu()">&#9776;</button>
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-        <ul class="navbar-nav pb-4">
+        <ul class="navbar-nav p-1">
             <li class="nav-item p-2">
-                <a class="nav-link" (click)="scrollToElement('#main-header')">Quem somos</a>
+                <a class="nav-link white-link" (click)="scrollToElement('#main-header')">Quem somos</a>
             </li>
             <li class="nav-item p-2">
-                <a class="nav-link" (click)="scrollToElement('#team')">Nosso time</a>
+                <a class="nav-link white-link" (click)="scrollToElement('#team')">Nosso time</a>
             </li>
             <li class="nav-item p-2">
-                <a class="nav-link" (click)="scrollToElement('#modalities')">Modalidades</a>
+                <a class="nav-link white-link" (click)="scrollToElement('#modalities')">Modalidades</a>
             </li>
             <li class="nav-item p-2">
-                <a class="nav-link" (click)="scrollToElement('#reviews')">Depoimentos</a>
+                <a class="nav-link white-link" (click)="scrollToElement('#reviews')">Depoimentos</a>
             </li>
             <li class="nav-item p-2">
-                <a class="nav-link" (click)="scrollToElement('#footer')">Contatos</a>
+                <a class="nav-link white-link" (click)="scrollToElement('#footer')">Contatos</a>
             </li>
         </ul>
     </div>
