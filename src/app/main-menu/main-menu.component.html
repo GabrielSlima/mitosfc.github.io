@@ -2,7 +2,7 @@
     <a class="navbar-brand" (click)="scrollToElement('#main-header')"><img src="assets/images/logo.jpg" alt="Logo" id="logo"></a>
     <button id="navbar-toggler-button" [ngClass]="isMenuCollapsed && isOffsetZero? 'navbar-toggler-white navbar-toggler' : 'navbar-toggler'" type="button" (click)="collapseMenu()">&#9776;</button>
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-        <ul class="navbar-nav p-1">
+        <ul class="navbar-nav p-0">
             <li class="nav-item p-2">
                 <a class="nav-link white-link" (click)="scrollToElement('#about')">Quem somos</a>
             </li>
