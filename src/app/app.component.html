@@ -1,27 +1,57 @@
 <app-main-menu></app-main-menu>
-<header class="container-fluid" id="main-header">
+<header (window:resize)="onResize($event)" class="container-fluid" id="main-header">
     <div class="filter row justify-content-center">
         <div class="content align-self-center">
-            <div class="body">
-                <div class="phrases">
-                    <h1>SEJA BEM VINDO AO <b>MITOS FUTEBOL CLUBE</b></h1>
+            <div *ngIf="!large_screen; else largeScreenHeader"  class="default-header">
+                <div class="body">
+                    <div class="phrases">
+                        <h1>SEJA BEM VINDO AO <b>MITOS FUTEBOL CLUBE</b></h1>
+                    </div>
+                </div>
+                <div class="footer m-4">
+                    <ul class="icons">
+                        <li><a href="https://m.facebook.com/MITOSFCSG" target="blank"> <img src="assets/images/icons/facebook.svg" alt="Pagina Oficial do MitosFC no Facebook"></a></li>
+                        <li><a href="https://www.instagram.com/mitosfutsal/" target="blank"><img src="assets/images/icons/instagram.png" alt="Pagina Oficial do MitosFC no Instagram"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCL1IzdqCSaFLqEfI2pkLcjw" target="blank"><img src="assets/images/icons/youtube-white.png" alt="Pagina Oficial do MitosFC no Youtube"></a></li>
+                    </ul>
+                </div> <!--footer-->
+            </div>
+        </div>
+
+        <ng-template #largeScreenHeader>
+            <div class="body row">
+                <div class="footer col-1">
+                    <ul _ngcontent-vab-c102="" class="icons" style="padding: 0;">
+                        <li>
+                            <a href="https://m.facebook.com/MITOSFCSG" target="blank">
+                                <img src="assets/images/icons/facebook.svg" alt="Pagina Oficial do MitosFC no Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/mitosfutsal/" target="blank">
+                                <img src="assets/images/icons/instagram.png" alt="Pagina Oficial do MitosFC no Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCL1IzdqCSaFLqEfI2pkLcjw" target="blank">
+                                <img src="assets/images/icons/youtube-white.png" alt="Pagina Oficial do MitosFC no Youtube">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="padding: 0;" class="phrases col-10 justfy-content-center">
+                    <h1 class="align-self-center mt-5">
+                        SEJA BEM VINDO AO <b>MITOS FUTEBOL CLUBE</b>
+                    </h1>
                 </div>
             </div>
-            <div class="footer m-4">
-                <ul class="icons">
-                    <li><a href="https://m.facebook.com/MITOSFCSG" target="blank"> <img src="../assets/images/icons/facebook.svg" alt="Pagina Oficial do MitosFC no Facebook"></a></li>
-                    <li><a href="https://www.instagram.com/mitosfutsal/" target="blank"><img src="../assets/images/icons/instagram.png" alt="Pagina Oficial do MitosFC no Instagram"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCL1IzdqCSaFLqEfI2pkLcjw" target="blank"><img src="../assets/images/icons/youtube-white.png" alt="Pagina Oficial do MitosFC no Youtube"></a></li>
-                </ul>
-            </div> <!--footer-->
-        </div> <!-- FOOTER -->
+        </ng-template>
 
         <div id="more">
             <a (click)="scrollToElement(about)">
                 <div id="more-row">
                     <h4 class="m-4">SABER MAIS</h4>
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" class="jsx-156389127"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g></svg>
-
                 </div> <!-- MORE-ROW -->
             </a>
         </div> <!-- MORE -->
@@ -56,21 +86,51 @@
 
     <app-team id="team"></app-team>
 
-    <section #modalitiesContainer id="modalities" class="p-5 mt-4 container-fluid">
+    <section #modalitiesContainer  (window:resize)="onResize($event)" id="modalities" class="mt-4 pl-0 pr-0">
         <div class="modalities-container">
             <div class="title-container mb-5">
                 <h4 class="">MODALIDADES</h4>
             </div>
-            <div class="row">
-                <div *ngFor="let modality of modalities" class="col-12 col-sm-6 col-md-6 p-2">
-                    <div class="modality-container modality" style="background-image: url('../assets/images/games/{{ modality.image_name}}')">
+
+            <ng-container *ngIf="large_screen">
+                <ng-container *ngFor="let modality of modalities">
+                    
+                    <div *ngIf="checkPhotoPosition(modality) == 'left'; else rightPhoto" class="row" style="box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);">
+                        <div style="height: 450px;margin: 0 !important;padding: 0 !important;" class="col-12 pl-4 p-1 row">
+                            <div style="height: 100%;background: url('assets/images/games/{{ modality.image_name }}');background-size: cover;" class="col-6">
+                            </div>
+                            <div class="align-self-center col-6">
+                                <h3>{{ modality.name }}</h3>
+                                {{ modality.description }}
+                            </div>    
+                        </div>
+                    </div>
+
+                    <ng-template #rightPhoto>
+                        <div class="row modality-row" style="box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);">
+                            <div style="height: 450px;margin: 0 !important;padding: 0 !important;" class="col-12 pl-4 p-1 row">
+                                <div class="align-self-center col-6">
+                                        <h3>{{ modality.name }}</h3>
+                                        {{ modality.description }}
+                                    </div>  
+                                <div style="height: 100%;background: url('assets/images/games/{{ modality.image_name }}');background-size: cover;" class="col-6"></div> 
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+
+            </ng-container> <!--LARGE SCREEN-->
+
+            <ng-container *ngIf="!large_screen">
+                <div  *ngFor="let modality of modalities" class="col-12 col-sm-6 col-md-6 p-2 modality-row">
+                    <div class="modality-container modality" style="background-image: url('assets/images/games/{{ modality.image_name }}')">
                         <div class="filtered-modality {{ modality.color }}">
                             <h3 class="mb-3">{{ modality.name }}</h3>
                             <div>{{ modality.description }}</div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </ng-container>
         </div>
     </section>
 

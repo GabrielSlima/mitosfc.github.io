@@ -1,10 +1,10 @@
 <nav id="responsive-nav" (scroll)="onWindowScroll()" [ngClass]="!isMenuCollapsed || !isOffsetZero  ? 'navbar navbar-expand-lg navbar-light fixed-top bg-light': 'navbar navbar-expand-lg navbar-light fixed-top '">
-    <a class="navbar-brand" [routerLink]="['/']"><img src="../../assets/images/logo.jpg" alt="Logo" id="logo"></a>
+    <a class="navbar-brand" (click)="scrollToElement('#main-header')"><img src="assets/images/logo.jpg" alt="Logo" id="logo"></a>
     <button id="navbar-toggler-button" [ngClass]="isMenuCollapsed && isOffsetZero? 'navbar-toggler-white navbar-toggler' : 'navbar-toggler'" type="button" (click)="collapseMenu()">&#9776;</button>
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
         <ul class="navbar-nav p-1">
             <li class="nav-item p-2">
-                <a class="nav-link white-link" (click)="scrollToElement('#main-header')">Quem somos</a>
+                <a class="nav-link white-link" (click)="scrollToElement('#about')">Quem somos</a>
             </li>
             <li class="nav-item p-2">
                 <a class="nav-link white-link" (click)="scrollToElement('#team')">Nosso time</a>
