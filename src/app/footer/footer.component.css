@@ -41,6 +41,12 @@
     background: url('../../assets/images/cross.jpg')
 }
 
+#ms-capital {
+    background-size: 64%!important;
+    background: url('../../assets/images/ms-capital.png');
+    background-color: #F7F7F7;
+}
+
 #partnership {
     text-align: center;
 }
