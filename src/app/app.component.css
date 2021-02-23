@@ -22,6 +22,10 @@ header ul li {display: inline-block;}
 
 header ul li img{width: 30px; margin: 10px;}
 
+.body{
+    width: 100%;
+}
+
 #more {
     color: white;
     width: 100%;
@@ -75,11 +79,6 @@ header ul li img{width: 30px; margin: 10px;}
     border-radius: 20px;
     max-width: 360px;
     max-height: 320px;
-}
-
-.modalities-container{
-    max-width: 1080px;
-    margin: auto;
 }
 
 #reviews {padding: 5rem 3rem!important;}

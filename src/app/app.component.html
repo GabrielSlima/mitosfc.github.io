@@ -95,8 +95,8 @@
             <ng-container *ngIf="large_screen">
                 <ng-container *ngFor="let modality of modalities">
                     
-                    <div *ngIf="checkPhotoPosition(modality) == 'left'; else rightPhoto" class="row" style="box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);">
-                        <div style="height: 450px;margin: 0 !important;padding: 0 !important;" class="col-12 pl-4 p-1 row">
+                    <div *ngIf="checkPhotoPosition(modality) == 'left'; else rightPhoto" class="row" style="margin: auto; box-shadow: 1px 1px 5px rgba(0, 0, 0, .4); max-width:100%;">
+                        <div style="height: 325px; margin: 0 !important;padding: 0 !important;" class="col-12 pl-4 p-1 row">
                             <div style="height: 100%;background: url('assets/images/games/{{ modality.image_name }}');background-size: cover;" class="col-6">
                             </div>
                             <div class="align-self-center col-6">
@@ -107,8 +107,8 @@
                     </div>
 
                     <ng-template #rightPhoto>
-                        <div class="row modality-row" style="box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);">
-                            <div style="height: 450px;margin: 0 !important;padding: 0 !important;" class="col-12 pl-4 p-1 row">
+                        <div class="row modality-row" style="margin: auto; box-shadow: 1px 1px 5px rgba(0, 0, 0, .4); max-width:100%;">
+                            <div style="height: 325px; margin: 0 !important;padding: 0 !important;" class="col-12 pl-4 p-1 row">
                                 <div class="align-self-center col-6">
                                         <h3>{{ modality.name }}</h3>
                                         {{ modality.description }}
