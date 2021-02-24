@@ -35,7 +35,12 @@ header .filter {
     padding-bottom: 10px;
 }
 
-.about-wrapper, .team-wrapper, .reviews-wrapper, .modalities-container{
+.team-wrapper, .reviews-wrapper, .modalities-container{
     max-width: 800px;
+    margin: auto;
+}
+
+.about-wrapper {
+    max-width: 1080px;
     margin: auto;
 }
