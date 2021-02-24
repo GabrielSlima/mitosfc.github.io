@@ -5,6 +5,9 @@ header .phrases {
 
 .phrases h1 {
     font-weight: lighter!important;
+    max-width: 530px;
+    margin: auto;
+    margin-top: 0!important;
 }
 header .footer a {
     text-decoration: none;
@@ -43,6 +46,11 @@ header ul li img{width: 30px; margin: 10px;}
 #more-row {margin: 30px;}
 
 #more-row h4 {font-weight: lighter;}
+
+#more-row svg {
+    width: 25px;
+    height: 25px;
+}
 
 #about-text {line-height: 1.9;}
 
